@@ -1,0 +1,25 @@
+first <- read.csv("C:/Users/Administrator/first.csv", sep="")
+View(first)
+typeof(first)
+install.packages("wordcloud")
+install.packages("RColorBrewer")
+install.packages("tm")
+install.packages("SnowballC")
+library(tm)
+library(wordcloud)
+library(RColorBrewer)
+library("SnowballC")
+m <- as.matrix(dtm)
+memory.limit()
+memory.limit(size = 60000)
+
+## load text file
+text <- readLines(file.choose())
+docs <- Corpus(VectorSource(text))
+inspect(docs)
+dtm <- TermDocumentMatrix(docs)
+m <- as.matrix(dtm)
+
+
+set.seed(1234)
+wordcloud(words = d$)
